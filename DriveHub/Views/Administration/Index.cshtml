@@ -1,0 +1,53 @@
+﻿@{
+    ViewData["Title"] = "Admin Menu";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Административное меню</title>
+    <link rel="stylesheet" href="@Url.Content("../css/admin.css")">
+</head>
+<body>
+    <div class="container">
+        <h2>Добро пожаловать, администратор!</h2>
+        <p>"DromHub: Лучшие авто по лучшим ценам. Он не умер в конце 'Драйва', и мы тоже не сдаемся."</p>
+        <form method="post" action="/Administration">
+            <label for="page">Выберите страницу:</label>
+            <select name="page" id="page">
+                <option value="TestDriveRequests/Index">Запросы на тест-драйв</option>
+                <option value="Home/Index">Главная страница</option>
+                <option value="Cars/Index">Список автомобилей</option>
+                <option value="Roles/Index">Список ролей</option>
+                <option value="Users/Index">Список пользователей</option>
+                <option value="FavoriteCars/Index">Список избранных автомобилей</option>
+                <option value="Reviews/Index">Список отзывов</option>
+                <option value="CarServices/Index">Список услуг обслуживания автомобилей</option>
+                <option value="Dealerships/Index">Список автосалонов</option>
+                <option value="CarBrands/Index">Список брендов автомобилей</option>
+                <option value="AddCarBrand/Index">Добавление брендов автомобилей</option>
+                <option value="AddCars/Index">Добавление автомобилей</option>
+                <option value="AddUsers/Index">Добавление пользователей</option>
+                <option value="AddFavoriteCars/Index">Добавление избранных автомобилей</option>
+                <option value="AddReview/Index">Добавление отзывов</option>
+                <option value="AddCarServices/Index">Добавление услуг для автомобилей</option>
+                <option value="AddDealership/Index">Добавление автосалонов</option>
+                <option value="DeleteCar/Index">Удаление автомобилей</option>
+                <option value="DeleteUsers/Index">Удаление пользователей</option>
+                <option value="DeleteFavoriteCar/Index">Удаление избранных автомобилей</option>
+                <option value="DeleteCarService/Index">Удаление услуг</option>
+                <option value="DeleteDealership/Index">Удаление автосалонов</option>
+                <option value="DeleteCarBrand/Index">Удаление брендов</option>
+                <option value="PriceComparison/Index">Публикации</option>
+                <option value="CarServices1/Index">Редактирование услуг</option>
+                <option value="CarCompany/Index">Изменение статусов компаний (групповые операции)</option>
+
+            </select>
+            <button type="submit">Перейти</button>
+        </form>
+        <form method="get" action="/Home/Index">
+            <button type="submit" class="return-button">Вернуться на главную страницу</button>
+        </form>
+    </div>
+</body>
+</html>
